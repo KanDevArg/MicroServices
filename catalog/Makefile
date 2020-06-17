@@ -1,9 +1,9 @@
 
 GOPATH:=$(shell go env GOPATH)
 MODIFY=Mgithub.com/micro/go-micro/api/proto/api.proto=github.com/micro/go-micro/v2/api/proto
-SERVICE_SHORTNAME = catalog
+FOLDER_NAME=$(shell basename $(CURDIR))
+SERVICE_SHORTNAME = $(FOLDER_NAME)
 BINARY_NAME=$(SERVICE_SHORTNAME)-service
-
 
 .PHONY: proto
 proto:
